@@ -1,0 +1,66 @@
+.footer {
+    background-color: #f8f7f7;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.footer-item, .footer-item1, .footer-item2 {
+    flex: 1;
+  }
+
+  .footer-item p, .footer-item1 p, .footer-item2 p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .footer-item1 p {
+    margin-bottom: 10px;
+  }
+  .footer-item h2, .footer-item1 h2, .footer-item2 h2{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(21, 171, 68);
+  }
+  .footer-service {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-service li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .footer-item2 {
+    font-size: 14px;
+  }
+  
+  .footer-item2 p {
+    margin: 8px 0;
+  }
+  
+  .footer-item2 a {
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+  
+  .footer-item3 a:hover {
+    text-decoration: underline;
+  }
+/*   
+  @media screen and (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer-item, .footer-item1, .footer-item3 {
+      text-align: left;
+    }
+  }
+   */

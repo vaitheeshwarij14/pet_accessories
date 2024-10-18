@@ -1,0 +1,42 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+    background-color: #f5f5f5;
+}
+
+.authContainer {
+    background-color: rgb(255, 250, 250);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(63, 63, 63, 0.1);
+    width: 350px;
+    text-align: center;
+}
+h2{
+    font-size: 25px;
+}
+.inputGroup {
+    margin-bottom: 15px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    max-width: 90%;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.button {
+    padding: 10px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
