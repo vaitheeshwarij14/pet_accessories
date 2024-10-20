@@ -10,12 +10,7 @@ const CartPage = () => {
     removeFromCart,
   } = useContext(Shopcontext);
 
-  const weightOptions = [
-    { label: '250 g', value: 0.25 },
-    { label: '500 g', value: 0.5 },
-    { label: '1 kg', value: 1 },
-    { label: '2 kg', value: 2 },
-  ];
+  
 
   const handleWeightChange = (itemId, event) => {
     const newWeight = parseFloat(event.target.value);
@@ -68,11 +63,7 @@ const CartPage = () => {
                     value={item.weight}
                     onChange={(e) => handleWeightChange(item.id, e)}
                   >
-                    {weightOptions.map((option, index) => (
-                      <option key={index} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
+                    
                   </select>
                   <input
                     type="number"

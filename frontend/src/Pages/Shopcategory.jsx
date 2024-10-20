@@ -12,12 +12,7 @@ const Shopcategory = ({ category }) => {
   const [cartQuantities, setCartQuantities] = useState({});
   const navigate = useNavigate();
 
-  const weightOptions = [
-    { label: '250 g', value: 0.25 },
-    { label: '500 g', value: 0.5 },
-    { label: '1 kg', value: 1 },
-    { label: '2 kg', value: 2 }
-  ];
+  
 
   useEffect(() => {
     fetchProducts(category);
@@ -124,9 +119,7 @@ const Shopcategory = ({ category }) => {
                 value={selectedWeight[product._id] || 1}
                 onChange={(e) => handleWeightChange(product._id, e)}
               >
-                {weightOptions.map((option, index) => (
-                  <option key={index} value={option.value}>{option.label}</option>
-                ))}
+                
               </select>
             </div>
             <div>Price:<span className="product-price">₹{(product.pricePerKg * (selectedWeight[product._id] || 1)).toFixed(2)}</span></div>

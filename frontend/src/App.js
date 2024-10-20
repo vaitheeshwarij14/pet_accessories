@@ -15,9 +15,9 @@ function App() {
       <Navbar />
       <Routes>
           <Route path='/'element={<Hero />}/>
-          <Route path='/vegetables'element={<Shopcategory category="vegetables" />}/>
-          <Route path='/fruits'element={<Shopcategory category="fruits" />}/>
-          <Route path='/dryfruits'element={<Shopcategory category="dryfruits" />}/>
+          <Route path='/Dogs'element={<Shopcategory category="Dogs" />}/>
+          <Route path='/Cats'element={<Shopcategory category="Cats" />}/>
+          <Route path='/Birds'element={<Shopcategory category="Birds" />}/>
           <Route path="/shopcategory/:category" element={<Shopcategory />} />
           <Route path='/cart' element={<Cart />}/>
           <Route path='/login' element={<Login />}/>

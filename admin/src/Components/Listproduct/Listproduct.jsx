@@ -146,9 +146,9 @@ const Listproduct = () => {
                       }
                       onChange={(e) => handleEditChange(e, product._id)}
                     >
-                      <option value="vegetables">Vegetables</option>
-                      <option value="fruits">Fruits</option>
-                      <option value="dryfruits">Dryfruits</option>
+                      <option value="Dogs">Dogs</option>
+                      <option value="Cats">Cats</option>
+                      <option value="Birds">Birds</option>
                     </select>
                     <button
                       onClick={() => updateProduct(product._id)}

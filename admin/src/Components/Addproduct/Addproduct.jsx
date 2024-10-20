@@ -89,9 +89,9 @@ const AddProduct = () => {
                     className='add-product-selector'
                 >
                     <option>--select--</option>
-                    <option value="vegetables">Vegetables</option>
-                    <option value="fruits">Fruits</option>
-                    <option value="dryfruits">Dryfruits</option>
+                    <option value="Dogs">Dogs</option>
+                    <option value="Cats">Cats</option>
+                    <option value="Birds">Birds</option>
                 </select>
             </div>
             <div className="addproduct-itemfield">

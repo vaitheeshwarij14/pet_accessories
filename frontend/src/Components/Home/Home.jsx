@@ -12,12 +12,7 @@ const Hero = () => {
   const [cartQuantities, setCartQuantities] = useState({}); 
   const navigate = useNavigate(); 
 
-  const weightOptions = [
-    { label: '250 g', value: 0.25 },
-    { label: '500 g', value: 0.5 },
-    { label: '1 kg', value: 1 },
-    { label: '2 kg', value: 2 }
-  ];
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -136,16 +131,8 @@ const Hero = () => {
                 <img src={item.image} alt={item.name} className="product-image" />
                 <span className="product-name">{item.name}</span>
                 <div className="product-details">
-                  <label htmlFor="weight">Select Weight:</label>
-                  <select
-                    id="weight"
-                    value={selectedWeight[item._id] || 1}
-                    onChange={(e) => handleWeightChange(item._id, e)}
-                  >
-                    {weightOptions.map((option, index) => (
-                      <option key={index} value={option.value}>{option.label}</option>
-                    ))}
-                  </select>
+                  
+                 
                 </div>
                 <span className="product-price">
                   Price: ₹{(item.pricePerKg * (selectedWeight[item._id] || 1)).toFixed(2)}

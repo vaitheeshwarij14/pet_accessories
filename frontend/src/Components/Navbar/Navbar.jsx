@@ -17,17 +17,17 @@ const Navbar = () => {
           <Link to="/">Shop</Link>
           {menu === "shop" && <hr />}
         </li>
-        <li onClick={() => setMenu("vegetables")}>
-          <Link to="/vegetables">Vegetables</Link>
-          {menu === "vegetables" && <hr />}
+        <li onClick={() => setMenu("Dogs")}>
+          <Link to="/Dogs">Dogs</Link>
+          {menu === "Dogs" && <hr />}
         </li>
-        <li onClick={() => setMenu("fruits")}>
-          <Link to="/fruits">Fruits</Link>
-          {menu === "fruits" && <hr />}
+        <li onClick={() => setMenu("Cats")}>
+          <Link to="/Cats">Cats</Link>
+          {menu === "Cats" && <hr />}
         </li>
-        <li onClick={() => setMenu("dryfruits")}>
-          <Link to="/dryfruits">Dry Fruits</Link>
-          {menu === "dryfruits" && <hr />}
+        <li onClick={() => setMenu("Birds")}>
+          <Link to="/Birds">Birds</Link>
+          {menu === "Birds" && <hr />}
         </li>
       </div>
       <div className="nav-login">
