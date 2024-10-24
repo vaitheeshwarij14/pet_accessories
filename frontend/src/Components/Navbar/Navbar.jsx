@@ -29,6 +29,10 @@ const Navbar = () => {
           <Link to="/Birds">Birds</Link>
           {menu === "Birds" && <hr />}
         </li>
+        <li onClick={() => setMenu("Others")}>
+          <Link to="/Others">Others</Link>
+          {menu === "Others" && <hr />}
+        </li>
       </div>
       <div className="nav-login">
         

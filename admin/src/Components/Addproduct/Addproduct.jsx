@@ -92,6 +92,7 @@ const AddProduct = () => {
                     <option value="Dogs">Dogs</option>
                     <option value="Cats">Cats</option>
                     <option value="Birds">Birds</option>
+                    <option value="Others">Others</option>
                 </select>
             </div>
             <div className="addproduct-itemfield">

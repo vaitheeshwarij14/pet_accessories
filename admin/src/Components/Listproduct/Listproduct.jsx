@@ -149,6 +149,7 @@ const Listproduct = () => {
                       <option value="Dogs">Dogs</option>
                       <option value="Cats">Cats</option>
                       <option value="Birds">Birds</option>
+                      <option value="Others">Others</option>
                     </select>
                     <button
                       onClick={() => updateProduct(product._id)}

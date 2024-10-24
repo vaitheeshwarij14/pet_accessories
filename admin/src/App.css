@@ -1,0 +1,45 @@
+.admin-login {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .admin-login h2 {
+    text-align: center;
+  }
+  
+  .admin-login form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-login form div {
+    margin-bottom: 10px;
+  }
+  
+  .admin-login form label {
+    margin-bottom: 5px;
+  }
+  
+  .admin-login form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .admin-login form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .admin-login form button:hover {
+    background-color: #218838;
+  }
+  
