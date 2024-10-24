@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin panel</title>
+    <!-- Meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Admin Panel</title>
+    
+    <!-- Linking an external CSS file for styles -->
+    <link rel="stylesheet" href="/src/styles/admin.css" />
+    
+    <!-- Normalize.css for cross-browser compatibility -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-oHDEc8XedEBvB6m6c56gxHg+V2hfG8lX+z7Zj6lKfFQtC5f5UPpfYZWT5WlZ2M0FFZIS12WT+qu0dXg1nM8u9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Main JavaScript file for React -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
