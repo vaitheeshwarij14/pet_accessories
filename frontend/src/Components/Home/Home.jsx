@@ -112,7 +112,7 @@ const Hero = () => {
   return (
     <div>
       <div className="hero">
-        <h2>PURCHASE YOUR FAVOURITES</h2>
+        <h2>SHOP FOR YOUR FAVOURITES</h2>
         <input
           type="text"
           placeholder="Search products..."
