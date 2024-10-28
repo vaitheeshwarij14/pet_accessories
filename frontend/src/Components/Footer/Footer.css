@@ -1,66 +1,141 @@
 .footer {
-    background-color: #f8f7f7;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 12px;
-    font-weight: 400;
+  background-color: #f8f7f7;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 12px;
+  font-weight: 400;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.footer:hover {
+  background-color: #e3e3e3; /* Darker background on hover */
 }
 
 .footer-item, .footer-item1, .footer-item2 {
-    flex: 1;
-  }
+  flex: 1;
+  padding: 20px; /* Added padding for spacing */
+  transition: transform 0.3s ease;
+}
 
-  .footer-item p, .footer-item1 p, .footer-item2 p {
-    font-size: 16px;
-    font-weight: 500;
+.footer-item:hover,
+.footer-item1:hover,
+.footer-item2:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.footer-item p, .footer-item1 p, .footer-item2 p {
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.footer-item1 p {
+  margin-bottom: 10px;
+}
+
+.footer-item h2, .footer-item1 h2, .footer-item2 h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(21, 171, 68);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-item h2:hover, .footer-item1 h2:hover, .footer-item2 h2:hover {
+  color: #127f47; /* Darker green on hover */
+  transform: scale(1.1); /* Enlarge on hover */
+}
+
+.footer-service {
+  list-style: none;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-service li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  position: relative;
+  padding-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-service li::before {
+  content: "•"; /* Bullet point effect */
+  position: absolute;
+  left: 0;
+  color: rgb(21, 171, 68);
+  transition: color 0.3s ease;
+}
+
+.footer-service li:hover {
+  color: #127f47; /* Darker green text on hover */
+}
+
+.footer-service li:hover::before {
+  color: #FF3333; /* Change bullet point color on hover */
+}
+
+.footer-item2 {
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.footer-item2 p {
+  margin: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.footer-item2 p:hover {
+  color: #127f47; /* Darker green on hover */
+}
+
+.footer-item2 a {
+  color: #3f51b5; /* New blue color for links */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-item2 a:hover {
+  color: #FF3333; /* Brighter color on hover */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.footer-item3 a:hover {
+  text-decoration: underline;
+}
+
+/* Adding subtle animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
   }
-  
-  .footer-item1 p {
-    margin-bottom: 10px;
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
-  .footer-item h2, .footer-item1 h2, .footer-item2 h2{
-    font-size: 25px;
-    font-weight: 600;
-    color: rgb(21, 171, 68);
-  }
-  .footer-service {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-service li {
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-  
-  .footer-item2 {
-    font-size: 14px;
-  }
-  
-  .footer-item2 p {
-    margin: 8px 0;
-  }
-  
-  .footer-item2 a {
-    color: #ecf0f1;
-    text-decoration: none;
-  }
-  
-  .footer-item3 a:hover {
-    text-decoration: underline;
-  }
-/*   
-  @media screen and (max-width: 768px) {
-    .footer {
+}
+
+.footer-item, .footer-item1, .footer-item2 {
+  animation: fadeIn 1s ease both;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer {
       flex-direction: column;
       align-items: flex-start;
-    }
-  
-    .footer-item, .footer-item1, .footer-item3 {
-      text-align: left;
-    }
   }
-   */
+
+  .footer-item, .footer-item1, .footer-item2 {
+      text-align: left;
+      padding: 10px 0;
+      animation: none; /* Disable animations on mobile for performance */
+  }
+}
