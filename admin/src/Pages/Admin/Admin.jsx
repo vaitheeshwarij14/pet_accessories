@@ -4,10 +4,14 @@ import Sidebar from '../../Components/Sidebar/Sidebar';
 import { Routes, Route } from 'react-router-dom';
 import Addproduct from '../../Components/Addproduct/Addproduct';
 import Listproduct from '../../Components/Listproduct/Listproduct';
+import backgroundImage from '../../assets/summa.jpg';  // Importing the image
 
 const Admin = () => {
   return (
-    <div className='admin'>
+    <div 
+      className='admin'
+      style={{ backgroundImage: `url(${backgroundImage})` }} // Inline style for background image
+    >
       <Sidebar />
       <div className='admin-content'>
         <Routes>

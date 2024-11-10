@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../Assets/logo.avif';  
+import logo from '../Assets/logo.avif';
 import './Navbar.css';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
+  const [sparkle, setSparkle] = useState({});
+
+  const handleMenuClick = (item) => {
+    setMenu(item);
+    triggerSparkle(item);
+  };
+
+  const triggerSparkle = (item) => {
+    setSparkle({ [item]: true });
+    setTimeout(() => setSparkle({}), 600); // Remove sparkle after animation duration
+  };
 
   // Function to handle sparkle effect on button click
   const handleButtonClick = (e) => {
@@ -26,22 +37,27 @@ const Navbar = () => {
         <li onClick={() => setMenu("shop")}>
           <Link to="/">Shop</Link>
           {menu === "shop" && <hr />}
+          {sparkle["shop"] && <span className="sparkle"></span>}
         </li>
-        <li onClick={() => setMenu("Dogs")}>
+        <li onClick={() => handleMenuClick("Dogs")}>
           <Link to="/Dogs">Dogs</Link>
           {menu === "Dogs" && <hr />}
+          {sparkle["Dogs"] && <span className="sparkle"></span>}
         </li>
-        <li onClick={() => setMenu("Cats")}>
+        <li onClick={() => handleMenuClick("Cats")}>
           <Link to="/Cats">Cats</Link>
           {menu === "Cats" && <hr />}
+          {sparkle["Cats"] && <span className="sparkle"></span>}
         </li>
-        <li onClick={() => setMenu("Birds")}>
+        <li onClick={() => handleMenuClick("Birds")}>
           <Link to="/Birds">Birds</Link>
           {menu === "Birds" && <hr />}
+          {sparkle["Birds"] && <span className="sparkle"></span>}
         </li>
-        <li onClick={() => setMenu("Others")}>
+        <li onClick={() => handleMenuClick("Others")}>
           <Link to="/Others">Others</Link>
           {menu === "Others" && <hr />}
+          {sparkle["Others"] && <span className="sparkle"></span>}
         </li>
       </div>
 
