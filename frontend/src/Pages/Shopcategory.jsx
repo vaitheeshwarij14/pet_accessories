@@ -113,14 +113,8 @@ const Shopcategory = ({ category }) => {
             <img src={product.image} alt={product.name} className="product-image" />
             <span className="product-name">{product.name}</span>
             <div className="product-details">
-              <label htmlFor="weight">Select Weight:</label>
-              <select
-                id="weight"
-                value={selectedWeight[product._id] || 1}
-                onChange={(e) => handleWeightChange(product._id, e)}
-              >
-                
-              </select>
+              
+            
             </div>
             <div>Price:<span className="product-price">₹{(product.pricePerKg * (selectedWeight[product._id] || 1)).toFixed(2)}</span></div>
             {cartQuantities[product._id] ? (

@@ -1,93 +1,170 @@
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    padding: 7px;
-    box-shadow: 0 1px 3px -2px black;
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #607D8B, #90A4AE, #B0BEC5, #CFD8DC); /* Shades of blue-gray */
+  border-radius: 10px;
 }
-.nav{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+
+/* Logo and Navbar Heading */
 .nav p {
-    color: #171717;
-    font-size: 28px;
-    font-weight: 600;
-  }
-.nav img{
-  height: 50px;
-  width: 70px;
+  color: #263238; /* Dark Slate Gray */
+  font-size: 30px;
+  font-weight: 700;
 }
-.nav-menu{
-    display: flex;
-    align-items:center;
-    list-style: none;
-    gap: 50px;
-    color: #626262;
-    font-size: 20px;
-    font-weight: 500;
+
+.nav img {
+  height: 60px;
+  width: 80px;
+  border-radius: 15px;
+  border: 2px solid #90A4AE; /* Light Blue-Gray */
+}
+
+/* Nav Menu Styles */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 40px;
+  color: #37474F; /* Dark Grayish Blue */
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  position: relative;  /* for the star sprinkle effect */
+}
+
+.nav-menu li:hover {
+  transform: scale(1.1);
+}
+
+.nav-menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #78909C; /* Muted Blue-Gray */
+}
+
+.nav-menu li a {
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  color: #263238; /* Dark Slate Gray */
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.nav-menu li a:hover {
+  background-color: #ECEFF1; /* Light Gray-Blue */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Login and Cart Button Styles */
+.nav-login button, .nav-cart button {
+  width: 140px;
+  height: 50px;
+  outline: none;
+  border: 3px solid #37474F; /* Dark Grayish Blue */
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #455A64, #607D8B, #78909C); /* Blue-Gray Gradient */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease, transform 0.3s;
+}
+
+/* Button Hover Effect */
+.nav-login button:hover, .nav-cart button:hover {
+  background: linear-gradient(45deg, #78909C, #90A4AE, #B0BEC5); /* Lighter Blue-Gray */
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Active Effect with Animation */
+.nav-login button:active, .nav-cart button:active {
+  background: #455A64; /* Dark Blue-Gray */
+  animation: sparkle 0.6s ease-in-out;
+}
+
+/* Sparkle Keyframe Animation */
+@keyframes sparkle {
+  0% {
+    box-shadow: 0 0 5px #00BCD4, 0 0 10px #00BCD4; /* Cyan sparkle */
   }
-  .nav-menu li {    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    cursor: pointer;
+  50% {
+    box-shadow: 0 0 15px #00BCD4, 0 0 25px #00BCD4;
   }
-  .nav-menu hr{
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background: #FF4141;
+  100% {
+    box-shadow: 0 0 5px #00BCD4, 0 0 10px #00BCD4;
   }
-  .nav-menu li a {
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
+}
+
+/* Star Sprinkle Effect */
+button:after {
+  content: "★";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  opacity: 0;
+  font-size: 24px;
+  color: #00BCD4; /* Cyan star */
+  animation: starfall 0.8s ease-in-out forwards;
+  pointer-events: none;
+}
+
+/* Starfall Keyframe Animation */
+@keyframes starfall {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) rotate(0deg);
   }
-  .nav-menu li a:hover {
-    background-color: #a49e9e;
-    border-radius: 1px;
+  50% {
+    opacity: 1;
+    transform: translateY(0) rotate(45deg);
   }
-  .nav-login{
-    display: flex;
-    align-items: center;
-    gap: 45px;
+  100% {
+    opacity: 0;
+    transform: translateY(30px) rotate(90deg);
   }
-  .nav-login button{
-    width: 100px;
-    height: 50px;
-    outline: none;
-    border: 1px solid #7a7a7a;
-    border-radius: 75px;
-    color: #515151;
-    font-size: 20px;
-    font-weight: 500;
-    background: white;
-    cursor: pointer;
+}
+
+/* Add More Stars for Click Animation */
+button:before {
+  content: "★ ★ ★ ★ ★";
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  font-size: 16px;
+  color: #00BCD4; /* Cyan stars */
+  opacity: 0;
+  animation: starfall-anim 1s ease-in-out forwards;
+}
+
+/* Additional Starfall Animation */
+@keyframes starfall-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) rotate(0deg);
   }
-  .nav-login button:active{
-    background: #f3f3f3;
+  50% {
+    opacity: 1;
+    transform: translateY(0) rotate(45deg);
   }
-  .nav-cart{
-    display: flex;
-    align-items: center;
-    gap: 45px;
+  100% {
+    opacity: 0;
+    transform: translateY(30px) rotate(90deg);
   }
-  .nav-cart button{
-    width: 100px;
-    height: 50px;
-    outline: none;
-    border: 1px solid #7a7a7a;
-    border-radius: 75px;
-    color: #515151;
-    font-size: 20px;
-    font-weight: 500;
-    background: white;
-    cursor: pointer;
-  }
-  .nav-cart button:active{
-    background: #f3f3f3;
-  }
+}

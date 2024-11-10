@@ -6,15 +6,19 @@ import Shopcategory from './Pages/Shopcategory';
 import Cart from './Pages/Cart';
 import Login from './Pages/Login';
 import Hero from './Components/Home/Home';
+import VideoBackground from './Components/Background/VideoBackground'; 
+import './App.css';
+// Import the video background component
 
 // Admin Components
-import AdminLogin from './Components/AdminLogin';  // Add admin login component
-import AdminDashboard from './Components/AdminDashboard';  // Add admin dashboard component
+import AdminLogin from './Components/AdminLogin';  
+import AdminDashboard from './Components/AdminDashboard';  
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+        <VideoBackground /> {/* Add the video background here */}
         {/* Navbar and Footer will not appear on admin login */}
         <Routes>
           {/* User-facing routes */}

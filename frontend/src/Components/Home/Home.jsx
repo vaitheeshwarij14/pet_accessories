@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import './Home.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { Shopcontext } from '../../Context/Shopcontext'; 
+
 const Hero = () => {
   const { addToCart, updateCartItemQuantity, removeFromCart, cart } = useContext(Shopcontext); 
   const [searchQuery, setSearchQuery] = useState('');
@@ -11,8 +12,6 @@ const Hero = () => {
   const [selectedWeight, setSelectedWeight] = useState({}); 
   const [cartQuantities, setCartQuantities] = useState({}); 
   const navigate = useNavigate(); 
-
-
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -29,7 +28,6 @@ const Hero = () => {
         setLoading(false);
       }
     };
-  
     fetchProducts();
   }, []);
 
@@ -75,17 +73,15 @@ const Hero = () => {
 
   const handleIncreaseQuantity = (productId) => {
     const newQuantity = (cartQuantities[productId] || 0) + 1;
-        setCartQuantities((prev) => ({
+    setCartQuantities((prev) => ({
       ...prev,
       [productId]: newQuantity,
     }));
-  
     updateCartItemQuantity(productId, newQuantity);
   };
 
   const handleDecreaseQuantity = (productId) => {
     const newQuantity = (cartQuantities[productId] || 1) - 1;
-  
     if (newQuantity < 1) {
       setCartQuantities((prev) => {
         const { [productId]: _, ...rest } = prev;
@@ -130,10 +126,7 @@ const Hero = () => {
               <div key={item._id} className="product-item">
                 <img src={item.image} alt={item.name} className="product-image" />
                 <span className="product-name">{item.name}</span>
-                <div className="product-details">
-                  
-                 
-                </div>
+                
                 <span className="product-price">
                   Price: ₹{(item.pricePerKg * (selectedWeight[item._id] || 1)).toFixed(2)}
                 </span>

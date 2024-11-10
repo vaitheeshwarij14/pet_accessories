@@ -1,66 +1,67 @@
 .footer {
-    background-color: #f8f7f7;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 12px;
-    font-weight: 400;
+  background-color: #FCE4EC; /* Soft pink background */
+  padding: 50px 20px; /* Added padding for better spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 400;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow instead of a line */
+  border: none; /* Ensure no borders */
 }
 
 .footer-item, .footer-item1, .footer-item2 {
-    flex: 1;
-  }
+  flex: 1;
+  color: #4E342E; /* Brown text color */
+  margin: 0 15px;
+}
 
-  .footer-item p, .footer-item1 p, .footer-item2 p {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  .footer-item1 p {
-    margin-bottom: 10px;
-  }
-  .footer-item h2, .footer-item1 h2, .footer-item2 h2{
-    font-size: 25px;
-    font-weight: 600;
-    color: rgb(21, 171, 68);
-  }
-  .footer-service {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-service li {
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-  
-  .footer-item2 {
-    font-size: 14px;
-  }
-  
-  .footer-item2 p {
-    margin: 8px 0;
-  }
-  
-  .footer-item2 a {
-    color: #ecf0f1;
-    text-decoration: none;
-  }
-  
-  .footer-item3 a:hover {
-    text-decoration: underline;
-  }
-/*   
-  @media screen and (max-width: 768px) {
-    .footer {
+.footer-item h2, .footer-item1 h2, .footer-item2 h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #E91E63; /* Dark pink for headings */
+  margin-bottom: 20px;
+}
+
+.footer-item p, .footer-item1 p, .footer-item2 p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333; /* Darker text for better readability */
+}
+
+.footer-service {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-service li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #6D4C41; /* Medium brown for the list items */
+}
+
+.footer-item2 p {
+  margin: 10px 0;
+}
+
+.footer-item2 a {
+  color: #FF4081; /* Bright pink for links */
+  text-decoration: none;
+}
+
+.footer-item2 a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
       flex-direction: column;
       align-items: flex-start;
-    }
-  
-    .footer-item, .footer-item1, .footer-item3 {
-      text-align: left;
-    }
   }
-   */
+
+  .footer-item, .footer-item1, .footer-item2 {
+      text-align: left;
+      margin-bottom: 20px;
+  }
+}

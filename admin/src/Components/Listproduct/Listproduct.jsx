@@ -50,7 +50,7 @@ const Listproduct = () => {
       const updatedProductData = {
         id: productId, 
         name: productDetails.name,
-        pricePerKg: productDetails.pricePerKg,
+        
         category: productDetails.category || 'defaultCategory',
       };
       await fetch('http://localhost:5000/updateproduct', {
@@ -134,7 +134,7 @@ const Listproduct = () => {
                     />
                     <input
                       type="text"
-                      name="pricePerKg"
+                      
                       value={editProductDetails[product._id]?.pricePerKg || ''} 
                       onChange={(e) => handleEditChange(e, product._id)}
                     />
@@ -161,7 +161,7 @@ const Listproduct = () => {
                 ) : (
                   <>
                     <p>{product.name}</p>
-                    <p>${product.pricePerKg}</p>
+                    
                     <p>{product.category}</p>
                     <button
                       onClick={() => startEditing(product._id, product)}

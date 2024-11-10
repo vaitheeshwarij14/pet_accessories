@@ -8,7 +8,7 @@ const AddProduct = () => {
         name: "",
         image: "",
         category: "",
-        pricePerKg: "" 
+        
     });    
     
     const [loading, setLoading] = useState(false);
@@ -69,16 +69,7 @@ const AddProduct = () => {
                 />
             </div>
             <div className="addproduct-price">
-                <div className="addproduct-itemfield">
-                    <p>Price</p>
-                    <input
-                        value={productDetails.pricePerKg}
-                        onChange={changeHandler}
-                        type='text'
-                        name="pricePerKg"
-                        placeholder='Type here'
-                    />
-                </div>
+               
             </div>
             <div className="addproduct-itemfield">
                 <p>Product Category</p>

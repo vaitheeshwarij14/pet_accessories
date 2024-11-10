@@ -6,12 +6,22 @@ import './Navbar.css';
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
 
+  // Function to handle sparkle effect on button click
+  const handleButtonClick = (e) => {
+    const button = e.target;
+    button.classList.add('active');
+    setTimeout(() => {
+      button.classList.remove('active');
+    }, 600); // Matches the duration of the sparkle animation (0.6s)
+  };
+
   return (
     <div className="navbar">
       <div className="nav">
         <img src={logo} alt="Logo" /> 
-        <p>Freshmart</p>
+        <p>Petique</p>
       </div>
+
       <div className="nav-menu">
         <li onClick={() => setMenu("shop")}>
           <Link to="/">Shop</Link>
@@ -34,16 +44,26 @@ const Navbar = () => {
           {menu === "Others" && <hr />}
         </li>
       </div>
+
       <div className="nav-login">
-        
         {localStorage.getItem('auth-token') ? (
-          <button onClick={() => { localStorage.removeItem('auth-token'); window.location.replace('/'); }}>
+          <button 
+            onClick={(e) => { 
+              localStorage.removeItem('auth-token'); 
+              window.location.replace('/'); 
+              handleButtonClick(e);
+            }}
+          >
             Logout
           </button>
         ) : (
-          <Link to="/login"><button>Login</button></Link>
+          <Link to="/login">
+            <button onClick={handleButtonClick}>Login</button>
+          </Link>
         )}
-          <Link to="/cart"><button>Cart</button></Link>
+        <Link to="/cart">
+          <button onClick={handleButtonClick}>Cart</button>
+        </Link>
       </div>
     </div>
   );

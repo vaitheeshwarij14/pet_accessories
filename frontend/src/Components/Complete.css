@@ -1,0 +1,323 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Logo and Navbar Heading */
+  .nav p {
+    color: #263238; /* Dark Slate Gray */
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .nav img {
+    height: 60px;
+    width: 80px;
+    border-radius: 15px;
+    border: 2px solid #90A4AE; /* Light Blue-Gray */
+  }
+  
+  /* Nav Menu Styles */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    color: #37474F; /* Dark Grayish Blue */
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    position: relative;  /* for the star sprinkle effect */
+  }
+  
+  .nav-menu li:hover {
+    transform: scale(1.1);
+  }
+  
+  .nav-menu hr {
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: #78909C; /* Muted Blue-Gray */
+  }
+  
+  .nav-menu li a {
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #263238; /* Dark Slate Gray */
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+  }
+  
+  .nav-menu li a:hover {
+    background-color: #ECEFF1; /* Light Gray-Blue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Login and Cart Button Styles */
+  .nav-login button, .nav-cart button {
+    width: 140px;
+    height: 50px;
+    outline: none;
+    border: 3px solid #37474F; /* Dark Grayish Blue */
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(45deg, #455A64, #607D8B, #78909C); /* Blue-Gray Gradient */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s ease, transform 0.3s;
+  }
+  
+  /* Button Hover Effect */
+  .nav-login button:hover, .nav-cart button:hover {
+    background: linear-gradient(45deg, #78909C, #90A4AE, #B0BEC5); /* Lighter Blue-Gray */
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Active Effect with Animation */
+  .nav-login button:active, .nav-cart button:active {
+    background: #455A64; /* Dark Blue-Gray */
+    animation: sparkle 0.6s ease-in-out;
+  }
+  
+  /* Sparkle Keyframe Animation */
+  @keyframes sparkle {
+    0% {
+      box-shadow: 0 0 5px #00BCD4, 0 0 10px #00BCD4; /* Cyan sparkle */
+    }
+    50% {
+      box-shadow: 0 0 15px #00BCD4, 0 0 25px #00BCD4;
+    }
+    100% {
+      box-shadow: 0 0 5px #00BCD4, 0 0 10px #00BCD4;
+    }
+  }
+  
+  /* Star Sprinkle Effect */
+  button:after {
+    content: "★";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    opacity: 0;
+    font-size: 24px;
+    color: #00BCD4; /* Cyan star */
+    animation: starfall 0.8s ease-in-out forwards;
+  }
+  
+  /* Starfall Keyframe Animation */
+  @keyframes starfall {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(30px) rotate(90deg);
+    }
+  }
+  
+  /* Add More Stars for Click Animation */
+  button:before {
+    content: "★ ★ ★ ★ ★";
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    font-size: 16px;
+    color: #00BCD4; /* Cyan stars */
+    opacity: 0;
+    animation: starfall-anim 1s ease-in-out forwards;
+  }
+  
+  /* Additional Starfall Animation */
+  @keyframes starfall-anim {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0) rotate(45deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(30px) rotate(90deg);
+    }
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    padding: 20px;
+    text-align: center;
+    max-width: 1500px; 
+    margin: 0 auto; 
+  }
+    
+  .search-bar {
+    margin: 20px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+    
+  .hero-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+   
+  .product-item {
+    margin: 20px; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px; 
+    text-align: center;
+  }
+    
+  .product-image {
+    max-width: 100%;
+    height: auto; 
+  }
+    
+  .product-name {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+   
+  .product-price {
+    display: block;
+    margin-top: 5px;
+    color: green;
+    margin-top: 10px;
+  }
+    
+  .show-more-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .product-details select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 150px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .add-to-cart {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #246834; 
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 150px; 
+    object-fit: scale-down;
+    overflow: hidden;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .quantity-controls button {
+    margin-top: 15px;
+    padding: 5px 15px;
+    background-color: #28a745;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    padding: 50px 20px; /* Added padding for better spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow instead of a line */
+    border: none; /* Ensure no borders */
+  }
+  
+  .footer-item, .footer-item1, .footer-item2 {
+    flex: 1;
+    color: #4E342E; /* Brown text color */
+    margin: 0 15px;
+  }
+  
+  .footer-item h2, .footer-item1 h2, .footer-item2 h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #E91E63; /* Dark pink for headings */
+    margin-bottom: 20px;
+  }
+  
+  .footer-item p, .footer-item1 p, .footer-item2 p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333; /* Dark text for paragraphs */
+  }
+  
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
