@@ -8,7 +8,7 @@ const AdminLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Admin credentials validation
-    if (email === 'sivaharinikumaravel93@gmail.com' && password === '123') {
+    if (email === 'admin@gmail.com' && password === '123') {
       // Redirect to external URL (http://localhost:5173/)
       window.location.href = 'http://localhost:5173/';
     } else {
