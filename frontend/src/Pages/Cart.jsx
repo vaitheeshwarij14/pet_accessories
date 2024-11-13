@@ -97,7 +97,7 @@ const CartPage = () => {
                   <h3>${calculateSubtotal()}</h3>
                 </div>
               </div>
-              <button>PROCEED TO CHECKOUT</button>
+              <button>PAYMENT</button>
             </div>
           </div>
         </>
