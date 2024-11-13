@@ -108,7 +108,7 @@ const ShopProvider = ({ children }) => {
 
   const fetchProducts = async (category) => {
     try {
-      const url = category ? `http://localhost:5000/allproducts?category=${category}` : 'http://localhost:5000/allproducts';
+      const url = category ? `https://pet-accessories-jjx2.onrender.com/allproducts?category=${category}` : 'https://pet-accessories-jjx2.onrender.com/allproducts';
       const response = await fetch(url);
       const data = await response.json();
       setAllProduct(data);

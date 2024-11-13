@@ -9,7 +9,7 @@ const Listproduct = () => {
 
   const fetchInfo = async () => {
     try {
-      const response = await fetch('http://localhost:5000/allproducts');
+      const response = await fetch('https://pet-accessories-jjx2.onrender.com/allproducts');
       const data = await response.json();
       setAllProducts(data);
     } catch (error) {
@@ -26,7 +26,7 @@ const Listproduct = () => {
     
     if (confirmDeletion) {
       try {
-        await fetch('http://localhost:5000/removeproduct', {
+        await fetch('https://pet-accessories-jjx2.onrender.com/removeproduct', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
@@ -53,7 +53,7 @@ const Listproduct = () => {
         
         category: productDetails.category || 'defaultCategory',
       };
-      await fetch('http://localhost:5000/updateproduct', {
+      await fetch('https://pet-accessories-jjx2.onrender.com/updateproduct', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

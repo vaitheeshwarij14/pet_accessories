@@ -12,7 +12,7 @@ const AuthPage = () => {
         console.log('Login attempted with:', formData);
 
         let responseData;
-        await fetch('http://localhost:5000/login', {
+        await fetch('https://pet-accessories-jjx2.onrender.com/login', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -40,7 +40,7 @@ const AuthPage = () => {
         console.log("Signup attempted with:", formData);
 
         let responseData;
-        await fetch('http://localhost:5000/signup', {
+        await fetch('https://pet-accessories-jjx2.onrender.com/signup', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
